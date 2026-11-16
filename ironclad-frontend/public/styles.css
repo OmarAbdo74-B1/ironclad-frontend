@@ -1,0 +1,98 @@
+:root {
+  --bg: #f5f6f8;
+  --surface: #ffffff;
+  --text: #16181d;
+  --muted: #5d6470;
+  --accent: #c2410c;
+  --border: #e3e6eb;
+  --dev: #2563eb;
+  --staging: #b45309;
+  --prod: #15803d;
+  --error: #b91c1c;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f1115;
+    --surface: #181b21;
+    --text: #e8eaee;
+    --muted: #9aa1ad;
+    --accent: #fb923c;
+    --border: #2a2f38;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.brand { display: flex; align-items: center; gap: 0.6rem; }
+.brand h1 { font-size: 1.25rem; margin: 0; letter-spacing: 0.02em; }
+.logo { color: var(--accent); font-size: 1.4rem; }
+
+.env-badge {
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #fff;
+  background: var(--muted);
+}
+.env-badge[data-env="dev"] { background: var(--dev); }
+.env-badge[data-env="staging"] { background: var(--staging); }
+.env-badge[data-env="prod"] { background: var(--prod); }
+.env-badge[data-env="error"] { background: var(--error); }
+
+main { max-width: 1200px; margin: 0 auto; padding: 1.5rem 2rem; }
+
+.toolbar { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem; }
+.toolbar select {
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+}
+.status { color: var(--muted); font-size: 0.9rem; margin-left: auto; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.card img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; display: block; background: var(--border); }
+.card-body { padding: 1rem; }
+.card-body h2 { font-size: 1.05rem; margin: 0.4rem 0; }
+.category { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); }
+.specs { color: var(--muted); margin: 0.3rem 0; font-size: 0.9rem; }
+.price { font-weight: 700; margin: 0.5rem 0 0; }
+
+.footer {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1.5rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+}

@@ -1,0 +1,14 @@
+{
+  "name": "ironclad-frontend",
+  "version": "1.0.0",
+  "description": "Ironclad car showroom web UI",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test \"test/**/*.test.js\"",
+    "test:ci": "mkdir -p coverage && node --test --experimental-test-coverage --test-reporter=spec --test-reporter-destination=stdout --test-reporter=lcov --test-reporter-destination=coverage/lcov.info --test-coverage-exclude=\"test/**\" \"test/**/*.test.js\""
+  }
+}

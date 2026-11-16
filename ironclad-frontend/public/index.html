@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ironclad Motors</title>
+  <link rel="icon" href="/placeholder.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo">◆</span>
+      <h1>Ironclad Motors</h1>
+    </div>
+    <span id="env-badge" class="env-badge" data-env="loading">…</span>
+  </header>
+
+  <main>
+    <section class="toolbar">
+      <label for="category-filter">Category</label>
+      <select id="category-filter">
+        <option value="">All</option>
+      </select>
+      <span id="status" class="status">Loading…</span>
+    </section>
+
+    <section id="car-grid" class="grid" aria-live="polite"></section>
+  </main>
+
+  <footer class="footer">
+    <span>Version <strong id="version">–</strong></span>
+    <span>Served by <strong id="pod">–</strong></span>
+  </footer>
+</body>
+</html>
