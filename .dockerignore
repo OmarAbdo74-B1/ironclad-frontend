@@ -1,0 +1,14 @@
+node_modules
+coverage
+.git
+.gitignore
+.gitattributes
+.scannerwork
+Jenkinsfile
+sonar-project.properties
+README.md
+.env
+.env.*
+*.pem
+.vscode
+.idea
