@@ -56,7 +56,7 @@ pipeline {
 
         stage('Build Image') {
             steps {
-                sh 'docker build --target runtime -t "$IMAGE_REPO:$IMAGE_TAG" .'
+                sh 'docker build --pull --no-cache --target runtime -t "$IMAGE_REPO:$IMAGE_TAG" .'
             }
         }
 
